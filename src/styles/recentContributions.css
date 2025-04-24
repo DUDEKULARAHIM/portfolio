@@ -643,40 +643,17 @@
 
 
 
-   .project-btn {
-    background-color: #00b4db;
-    color: white;
-    padding: 0.5rem 1.2rem;
-    border-radius: 25px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    border: none; /* Remove default button border */
-  }
-  
-  .project-btn:hover {
-    background-color: #0083b0;
-  }
-  
-  .project-btn:focus {
-    outline: none; /* Remove focus outline */
-  }
-  
-
-
-/* Highlight active card */
-.contribution-card.active {
-  border: 2px solid #00b4db;
-  box-shadow: 0 12px 25px rgba(0, 180, 219, 0.3);
-  transform: translateY(-6px);
-  transition: all 0.3s ease-in-out;
+/* ====== Base Styles ====== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #f8fbfd, #e0f7ff);
+  margin: 0;
+  padding: 0;
 }
 
 .recent-contributions-section {
   padding: 4rem 2rem;
-  background: linear-gradient(to bottom right, #f8fbfd, #e0f7ff);
   text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .rec-underline {
@@ -693,12 +670,12 @@ h2 {
   color: #003b5b;
 }
 
+/* ====== Layout ====== */
 .contributions-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
-  align-items: stretch;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .contribution-card {
@@ -709,25 +686,39 @@ h2 {
   text-align: center;
   transition: all 0.3s ease;
   cursor: pointer;
+  width: 300px;
+  overflow: hidden;
+  position: relative;
 }
 
 .contribution-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-5px);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
+.contribution-card.active {
+  border: 2px solid #00b4db;
+  box-shadow: 0 12px 25px rgba(0, 180, 219, 0.3);
+}
+
+/* ====== Project Image ====== */
 .project-image {
   width: 100%;
   height: auto;
   border-radius: 12px;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, filter 0.4s ease, opacity 0.4s ease;
+  opacity: 1; /* Removed blur opacity */
+  filter: none; /* Removed blur and grayscale filter */
 }
 
 .project-image:hover {
-  transform: scale(1.04);
+  transform: scale(1.05);
+  opacity: 1;
+  filter: none; /* No filter on hover */
 }
 
+/* ====== Titles and Descriptions ====== */
 .project-title {
   margin-top: 1rem;
   font-size: 1.5rem;
@@ -735,38 +726,47 @@ h2 {
   color: #003b5b;
 }
 
+/* Expandable content */
+/* ====== Project Details ====== */
 .project-details {
-  margin-top: 1.2rem;
-  animation: fadeIn 0.4s ease-in-out;
-  display: none;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  display: block;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .contribution-card.active .project-details {
-  display: block;
+  max-height: 1000px; /* Set to a large value to accommodate content */
+  opacity: 1;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 .project-description {
   font-size: 0.95rem;
   color: #444;
   margin: 0.8rem 0;
   line-height: 1.6;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-.tech-stack {
-  margin-top: 1rem;
+/* ====== Fade effect ====== */
+@keyframes fadeIn {
+  from {
+    /* opacity: 0; */
+    transform: translateY(10px);
+  }
+  to {
+    /* opacity: 1; */
+    transform: translateY(0);
+  }
 }
 
+/* ====== Tech Stack Tags ====== */
 .stack-heading {
   font-size: 1rem;
   font-weight: 600;
@@ -784,16 +784,24 @@ h2 {
 .tech-tag {
   background-color: #00b4db;
   color: white;
-  padding: 0.4rem 0.9rem;
-  border-radius: 30px;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
   font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
   transition: background-color 0.3s ease;
+}
+
+.tech-tag i {
+  font-size: 1.1rem;
 }
 
 .tech-tag:hover {
   background-color: #0083b0;
 }
 
+/* ====== Buttons ====== */
 .project-buttons {
   display: flex;
   justify-content: center;
@@ -802,29 +810,38 @@ h2 {
 }
 
 .project-btn {
-  background-color: rgb(22, 158, 211);
+  background-color: #169ed3;
   color: white;
-  padding: 0.5rem 1.2rem;
-  border-radius: 5px;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  font-size: 0.95rem;
+  width: 110px;
+  text-align: center;
 }
 
 .project-btn:hover {
-  background-color: #0083b0;
+  background-color: white;
+  color: #169ed3;
+  border: 2px solid #169ed3;
 }
 
-/* Responsive Design */
+/* ====== Responsive Design ====== */
 @media (max-width: 1024px) {
   .contributions-container {
-    grid-template-columns: repeat(2, 1fr);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
 @media (max-width: 768px) {
   .contributions-container {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
   }
 
   h2 {
@@ -834,4 +851,21 @@ h2 {
   .project-title {
     font-size: 1.3rem;
   }
+}
+
+.more-projects-btn {
+  margin-top: 2rem;
+  background: linear-gradient(to right, #00b4db, #0083b0);
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.more-projects-btn:hover {
+  background: linear-gradient(to right, #0083b0, #00b4db);
 }

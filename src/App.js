@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import ProjectsCarousel from "./components/ProjectsCarousel";
+// import ProjectsCarousel from "./components/ProjectsCarousel";
 import VideoCV from "./components/VideoCV";
 import AboutPage from "./pages/AboutUs";
 // import ProjectsPage from "./pages/ProjectsPage";
@@ -33,7 +33,7 @@ function App() {
               <About />
               {/* <ProjectsCarousel /> */}
               <RecentContributions />
-              <VideoCV />
+              {/* <VideoCV /> */}
               <Footer />
             </>
           }

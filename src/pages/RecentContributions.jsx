@@ -372,67 +372,208 @@
 
 
 
+// import React, { useState } from 'react';
+// import '../styles/recentContributions.css';
+// import img1 from '../assets/project1.png'; // Adjust to your real path
+// import img2 from '../assets/project2.png';
+// import img3 from '../assets/project3.png';
+// // import img4 from '../assets/project4.png';
+
+// const contributions = [
+//   // {
+//   //   id: 1,
+//   //   name: 'Restaurant Reservation Management',
+//   //   image: img1,
+//   //   description: 'AI-powered smart helmet for accident prevention and emergency response. Uses ML models to detect collisions and send emergency alerts in real-time.',
+//   //   techStack: ['React', 'Node.js', 'TensorFlow'],
+//   //   github: 'https://github.com/your-username/smart-helmet',
+//   //   live: 'https://smart-helmet.live',
+//   // },
+//   {
+//     // id: 1,
+//     name: "Restaurant Reservation Website",
+//     description: "Using Mern Stack Technologies i made a beautiful restaurant Booking application for user friendly and responsive for mobile application as well",
+//     techStack: ["html","css", "javascript", "react", "mongodb","express","Node","bootstrap"],
+//     image: img1,
+//     github: "https://github.com/DUDEKULARAHIM/Sample-Restaurant-Website",
+//     // more: "/projects/smart-helmet",
+//     live:"https://sample-restaurant-website.onrender.com",
+//   },
+//   {
+//     // id: 2;
+//     name: "Event Management Calender",
+//     description: "An event calendar helps users schedule, view, and manage events. It shows dates, highlights events, and allows adding, editing, and deleting events with easy navigation and custom date options.",
+//     techStack: ["node", "mongodb","localstorage","react","css","Javascript"],
+//     image: img2,
+//     github: "https://github.com/DUDEKULARAHIM/event-manager-calendar",
+//     // more: "/projects/chat-app",
+//     live: "https://event-manager-calendar.onrender.com",
+//   },
+//   {
+//     name: "Chat Application",
+//     description: "Real-time chat app using Socket.IO and MongoDB.",
+//     techStack: ["react", "css", "localstorage","socket.io","express","node","localstorage","bootstrap"],
+//     image: img3,
+//     github: "https://github.com/mohan2347/chat-application",
+//     // more: "/projects/placement-tracker",
+//     live: "https://chat-application-x.onrender.com",
+//   },
+//   // Add more projects as needed
+// ];
+
+// const RecentContributions = () => {
+//   const [expandedIds, setExpandedIds] = useState([]);
+
+//   const toggleDetails = (id) => {
+//     setExpandedIds((prev) => {
+//       if (prev.includes(id)) {
+//         return prev.filter((item) => item !== id);
+//       } else if (prev.length < 3) {
+//         return [...prev, id];
+//       } else {
+//         return [...prev.slice(1), id]; // keep max 3
+//       }
+//     });
+//   };
+
+//   return (
+//     <section className="recent-contributions-section">
+//       <h2>Projects</h2>
+//       <div className="rec-underline"></div>
+
+//       <div className="contributions-container">
+//         {contributions.map((project) => {
+//           const isExpanded = expandedIds.includes(project.id);
+
+//           return (
+//             <div
+//               key={project.id}
+//               className={`contribution-card ${isExpanded ? 'active' : ''}`}
+//               onClick={() => toggleDetails(project.id)}
+//             >
+//               <img
+//                 src={project.image}
+//                 alt={project.name}
+//                 className="project-image"
+//                 loading="lazy"
+//               />
+//               <h3 className="project-title">{project.name}</h3>
+
+//               {isExpanded && (
+//                 <div className="project-details">
+//                   <p className="project-description">{project.description}</p>
+
+//                   <div className="tech-stack">
+//                     <div className="stack-heading">Languages & Tech:</div>
+//                     <div className="tech-tags">
+//                       {project.techStack.map((tech, index) => (
+//                         <span key={index} className="tech-tag">
+//                           {tech}
+//                         </span>
+//                       ))}
+//                     </div>
+//                   </div>
+
+//                   <div className="project-buttons">
+//                     <a href={project.github} className="project-btn" target="_blank" rel="noopener noreferrer">
+//                       GitHub
+//                     </a>
+//                     <a href={project.live} className="project-btn" target="_blank" rel="noopener noreferrer">
+//                       Live Link
+//                     </a>
+//                   </div>
+//                 </div>
+//               )}
+//             </div>
+//           );
+//         })}
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default RecentContributions;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/recentContributions.css';
-import img1 from '../assets/project1.png'; // Adjust to your real path
+import img1 from '../assets/project1.png';
 import img2 from '../assets/project2.png';
 import img3 from '../assets/project3.png';
-// import img4 from '../assets/project4.png';
 
 const contributions = [
-  // {
-  //   id: 1,
-  //   name: 'Restaurant Reservation Management',
-  //   image: img1,
-  //   description: 'AI-powered smart helmet for accident prevention and emergency response. Uses ML models to detect collisions and send emergency alerts in real-time.',
-  //   techStack: ['React', 'Node.js', 'TensorFlow'],
-  //   github: 'https://github.com/your-username/smart-helmet',
-  //   live: 'https://smart-helmet.live',
-  // },
   {
-    // id: 1,
     name: "Restaurant Reservation Website",
-    description: "Using Mern Stack Technologies i made a beautiful restaurant Booking application for user friendly and responsive for mobile application as well",
-    techStack: ["html","css", "javascript", "react", "mongodb","express","Node","bootstrap"],
+    description: "Using MERN Stack Technologies I built a beautiful, responsive restaurant booking application, also mobile-friendly.",
+    techStack: ["html", "css", "javascript", "react", "mongodb", "express", "node", "bootstrap"],
     image: img1,
     github: "https://github.com/DUDEKULARAHIM/Sample-Restaurant-Website",
-    // more: "/projects/smart-helmet",
-    live:"https://sample-restaurant-website.onrender.com",
+    live: "https://sample-restaurant-website.onrender.com",
   },
   {
-    // id: 2;
-    name: "Event Management Calender",
-    description: "An event calendar helps users schedule, view, and manage events. It shows dates, highlights events, and allows adding, editing, and deleting events with easy navigation and custom date options.",
-    techStack: ["node", "mongodb","localstorage","react","css","Javascript"],
+    name: "Event Management Calendar",
+    description: "An event calendar with scheduling, adding/editing/deleting events, and custom date options.",
+    techStack: ["node", "mongodb", "localstorage", "react", "css", "javascript"],
     image: img2,
     github: "https://github.com/DUDEKULARAHIM/event-manager-calendar",
-    // more: "/projects/chat-app",
     live: "https://event-manager-calendar.onrender.com",
   },
   {
     name: "Chat Application",
     description: "Real-time chat app using Socket.IO and MongoDB.",
-    techStack: ["react", "css", "localstorage","socket.io","express","node","localstorage","bootstrap"],
+    techStack: ["react", "css", "localstorage", "socket.io", "express", "node", "bootstrap"],
     image: img3,
     github: "https://github.com/mohan2347/chat-application",
-    // more: "/projects/placement-tracker",
     live: "https://chat-application-x.onrender.com",
   },
-  // Add more projects as needed
 ];
+
+const getTechIcon = (tech) => {
+  const iconMap = {
+    html: "fab fa-html5",
+    css: "fab fa-css3-alt",
+    javascript: "fab fa-js",
+    react: "fab fa-react",
+    node: "fab fa-node-js",
+    "node.js": "fab fa-node-js",
+    mongodb: "fas fa-database",
+    express: "fas fa-server",
+    bootstrap: "fab fa-bootstrap",
+    "socket.io": "fas fa-plug",
+    localstorage: "fas fa-hdd",
+  };
+  const key = tech.toLowerCase();
+  return iconMap[key] || "fas fa-code";
+};
 
 const RecentContributions = () => {
   const [expandedIds, setExpandedIds] = useState([]);
+  const navigate = useNavigate();
 
   const toggleDetails = (id) => {
     setExpandedIds((prev) => {
-      if (prev.includes(id)) {
-        return prev.filter((item) => item !== id);
-      } else if (prev.length < 3) {
-        return [...prev, id];
-      } else {
-        return [...prev.slice(1), id]; // keep max 3
-      }
+      if (prev.includes(id)) return prev.filter((item) => item !== id);
+      else if (prev.length < 3) return [...prev, id];
+      else return [...prev.slice(1), id];
     });
   };
 
@@ -442,19 +583,19 @@ const RecentContributions = () => {
       <div className="rec-underline"></div>
 
       <div className="contributions-container">
-        {contributions.map((project) => {
-          const isExpanded = expandedIds.includes(project.id);
-
+        {contributions.map((project, index) => {
+          const isExpanded = expandedIds.includes(index);
           return (
             <div
-              key={project.id}
+              key={index}
               className={`contribution-card ${isExpanded ? 'active' : ''}`}
-              onClick={() => toggleDetails(project.id)}
+              onClick={() => toggleDetails(index)}
             >
               <img
                 src={project.image}
                 alt={project.name}
                 className="project-image"
+                loading="lazy"
               />
               <h3 className="project-title">{project.name}</h3>
 
@@ -465,9 +606,9 @@ const RecentContributions = () => {
                   <div className="tech-stack">
                     <div className="stack-heading">Languages & Tech:</div>
                     <div className="tech-tags">
-                      {project.techStack.map((tech, index) => (
-                        <span key={index} className="tech-tag">
-                          {tech}
+                      {project.techStack.map((tech, idx) => (
+                        <span key={idx} className="tech-tag">
+                          <i className={getTechIcon(tech)}></i> {tech}
                         </span>
                       ))}
                     </div>
@@ -487,6 +628,10 @@ const RecentContributions = () => {
           );
         })}
       </div>
+
+      <button className="more-projects-btn" onClick={() => navigate('/projects')}>
+        View More Projects
+      </button>
     </section>
   );
 };

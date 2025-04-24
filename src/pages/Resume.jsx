@@ -82,12 +82,14 @@ const Resume = () => {
       </div>
 
       {/* Resume Sections */}
-      <Education />
+      {/* <Education /> */}
       <Skills />
-      <KnownLanguages />
+      {/* <KnownLanguages /> */}
       <Certifications />
       <Achievements />
       <RecentContributions />
+      <KnownLanguages />
+      <Education />
       {/* <Footer /> */}
 
 

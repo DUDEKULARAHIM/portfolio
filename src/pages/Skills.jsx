@@ -333,3 +333,84 @@ const Skills = () => {
 };
 
 export default Skills;
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useState } from 'react';
+// import '../styles/skills.css';
+
+// const Skills = () => {
+//   const [showTechnicalRange, setShowTechnicalRange] = useState(false);
+//   const [showNonTechnicalRange, setShowNonTechnicalRange] = useState(false);
+
+//   // All Technical Skills (Languages, Frameworks, Tools & Platforms)
+//   const technicalSkills = [
+//     // Languages
+//     { name: 'C++', icon: 'fas fa-code', level: 88 },
+//     { name: 'Java', icon: 'fab fa-java', level: 85 },
+//     { name: 'C', icon: 'fas fa-code', level: 80 },
+//     { name: 'Python', icon: 'fab fa-python', level: 90 },
+
+//     // Frameworks
+//     { name: 'React.js', icon: 'fab fa-react', level: 85 },
+//     { name: 'Node.js', icon: 'fab fa-node', level: 80 },
+
+//     // Tools & Platforms
+//     { name: 'GitHub', icon: 'fab fa-github', level: 95 },
+//     { name: 'Git', icon: 'fab fa-git', level: 90 },
+//     { name: 'MySQL', icon: 'fas fa-database', level: 85 },
+//     { name: 'MongoDB', icon: 'fas fa-database', level: 90 },
+//     { name: 'Docker', icon: 'fab fa-docker', level: 75 },
+//   ];
+
+//   // Non-Technical Skills
+//   const nonTechnicalSkills = [
+//     { name: 'Communication', icon: 'fas fa-comments', level: 90 },
+//     { name: 'Teamplayer', icon: 'fas fa-users', level: 85 },
+//     { name: 'Problem Solving', icon: 'fas fa-lightbulb', level: 88 },
+//     { name: 'Adaptability', icon: 'fas fa-sync', level: 80 },
+//     { name: 'Time Management', icon: 'fas fa-clock', level: 87 },
+//     { name: 'Active Listener', icon: 'fas fa-headphones', level: 87 },
+//   ];
+
+//   return (
+//     <section className="skills-section">
+//       <h2>My Skills</h2>
+//       <div className="skills-underline"></div>
+
+//       <div className="skills-box">
+//         <h3>Technical Skills</h3>
+//         <div className="skills-grid">
+//           {technicalSkills.map((skill, index) => (
+//             <button key={index} className="skill-button">
+//               <i className={skill.icon}></i> {skill.name}
+//             </button>
+//           ))}
+//         </div>
+//       </div>
+
+//       {/* Non-Technical Skills */}
+//       <div className="skills-box">
+//         <h3>Non-Technical Skills</h3>
+//         <div className="skills-grid">
+//           {nonTechnicalSkills.map((skill, index) => (
+//             <button key={index} className="skill-button">
+//               <i className={skill.icon}></i> {skill.name}
+//             </button>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Skills;
