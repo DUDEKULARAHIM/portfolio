@@ -1,0 +1,161 @@
+/* 
+.known-languages-section {
+    padding: 3rem;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .underline {
+    width: 100px;
+    height: 4px;
+    background: #00b4db;
+    margin: 0.5rem auto 2rem;
+    border-radius: 2px;
+  }
+  
+  .languages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .language-card {
+    background-color: white;
+    border: 2px solid #00b4db;
+    border-radius: 12px;
+    padding: 1.2rem;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .language-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .language-card i {
+    font-size: 2.5rem;
+    color: #00b4db;
+    margin-bottom: 0.6rem;
+  }
+  
+  .language-card p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  @media (max-width: 600px) {
+    .languages-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+   */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .known-languages-section {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+    
+  }
+  
+  .known-underline {
+    width: 100px;
+    height: 4px;
+    background: #00b4db;
+    margin: 0.5rem auto 2rem;
+    border-radius: 2px;
+  }
+/*   
+  .languages-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .language-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    padding: 0.8rem 1.2rem;
+
+    background-color: white;
+    color: #00b4db;
+    border: 2px solid #00b4db;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .language-button:hover {
+    background-color: #00b4db;
+    color: white;
+  }
+  
+  .language-button i {
+    font-size: 1.3rem;
+  }
+   */
+
+
+
+   .languages-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .language-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 20px 30px;
+    background-color: white;
+    color: #00b4db;
+    border: 1.5px solid #00b4db;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .language-button:hover {
+    background-color: #00b4db;
+    color: white;
+  }
+  
+  .language-button i {
+    font-size: 1rem;
+  }
+  

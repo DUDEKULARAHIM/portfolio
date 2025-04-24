@@ -1,0 +1,837 @@
+/* 
+.recent-contributions-section {
+    padding: 3rem;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .underline {
+    width: 100px;
+    height: 4px;
+    background: #00b4db;
+    margin: 0.5rem auto 2rem;
+    border-radius: 2px;
+  }
+  
+  .contributions-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .contribution-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contribution-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contribution-card h3 {
+    font-size: 1.2rem;
+    color: #0083b0;
+    margin-bottom: 1rem;
+  }
+  
+  .project-date {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contribution-card p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .tech-tag {
+    background-color: #0083b0;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+  }
+   */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+   .recent-contributions-section {
+    padding: 3rem;
+    background-color: #f9f9f9; 
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .underline {
+    width: 100px;
+    height: 4px;
+    background: #00b4db;
+    margin: 0.5rem auto 2rem;
+    border-radius: 2px;
+  }
+  
+  .contributions-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .contribution-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+  }
+  
+  .date-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.3rem 0.7rem;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tech-stack {
+    margin-top: 1rem;
+  }
+  
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .tech-tag {
+    background-color: #0083b0;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    font-size: 0.85rem;
+  }
+  
+  .project-buttons {
+    margin-top: 1.2rem;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .project-btn {
+    background-color: #00b4db;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.3s;
+  }
+  
+  .project-btn:hover {
+    background-color: #0083b0;
+  }
+  
+  @media (max-width: 600px) {
+    .project-buttons {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+   */
+
+
+
+
+
+
+
+/* 
+
+   .recent-contributions-section {
+    padding: 3rem 1rem; 
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .rec-underline {
+    width: 100px;
+    height: 4px;
+    background: #00b4db;
+    margin: 0.5rem auto 2rem;
+    border-radius: 2px;
+  }
+  
+  .contributions-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .contribution-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+  }
+  
+  .date-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.3rem 0.7rem;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tech-stack {
+    margin-top: 1rem;
+  }
+  
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .tech-tag {
+    background-color: #0083b0;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    font-size: 0.85rem;
+  }
+  
+  .project-buttons {
+    margin-top: 1.2rem;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .project-btn {
+    background-color: #00b4db;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.3s;
+  }
+  
+  .project-btn:hover {
+    background-color: #0083b0;
+  }
+  
+  @media (max-width: 600px) {
+    .recent-contributions-section {
+      padding: 2rem 1rem;
+    }
+  
+    .contribution-card {
+      padding: 1rem;
+      font-size: 0.95rem;
+    }
+  
+    .contribution-card h3 {
+      font-size: 1.1rem;
+    }
+  
+    .date-btn {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+    }
+  
+    .tech-tag {
+      font-size: 0.75rem;
+      padding: 0.3rem 0.6rem;
+    }
+  
+    .project-buttons {
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+  
+    .project-btn {
+      justify-content: center;
+      font-size: 0.9rem;
+      padding: 0.45rem 0.9rem;
+    }
+  }
+  
+
+  .more-projects-btn-container {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .more-projects-btn {
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .more-projects-btn:hover {
+    background: linear-gradient(to right, #764ba2, #667eea);
+  }
+  
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+   .recent-contributions-section {
+    padding: 3rem;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .underline {
+    width: 100px;
+    height: 4px;
+    background: #00b4db;
+    
+    margin: 0.5rem auto 2rem;
+    border-radius: 2px;
+  }
+  
+  .contributions-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .contribution-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+  }
+  
+  .contribution-card h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-image {
+    width: 45px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 0.8rem;
+  }
+  
+  .date-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.3rem 0.7rem;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+  }
+  
+  .tech-stack {
+    margin-top: 1rem;
+  }
+  
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .tech-tag {
+    background-color: #0083b0;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    font-size: 0.85rem;
+  }
+  
+  .project-buttons {
+    margin-top: 1.2rem;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .project-btn {
+    background-color: #00b4db;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.3s;
+  }
+  
+  .project-btn:hover {
+    background-color: #0083b0;
+  }
+  
+  @media (max-width: 600px) {
+    .project-buttons {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .project-image {
+      width: 55px;
+      height: 55px;
+    }
+  }
+   */
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+
+
+   .recent-contributions-section {
+    padding: 3rem 1rem;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .rec-underline {
+    width: 100px;
+    height: 4px;
+    background: #00b4db;
+    margin: 0.5rem auto 2rem;
+    border-radius: 2px;
+  }
+  
+  .contributions-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 2rem;
+  }
+  
+  .contribution-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+  }
+  
+  .date-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.3rem 0.7rem;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tech-stack {
+    margin-top: 1rem;
+  }
+  
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .tech-tag {
+    background-color: #0083b0;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    font-size: 0.85rem;
+  }
+  
+  .project-buttons {
+    margin-top: 1.2rem;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .project-btn {
+    background-color: #00b4db;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.3s;
+  }
+  
+  .project-btn:hover {
+    background-color: #0083b0;
+  }
+  
+  @media (max-width: 768px) {
+    .contributions-container {
+      grid-template-columns: 1fr; 
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .recent-contributions-section {
+      padding: 2rem 1rem;
+    }
+  
+    .contribution-card {
+      padding: 1rem;
+      font-size: 0.95rem;
+    }
+  
+    .contribution-card h3 {
+      font-size: 1.1rem;
+    }
+  
+    .date-btn {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+    }
+  
+    .tech-tag {
+      font-size: 0.75rem;
+      padding: 0.3rem 0.6rem;
+    }
+  
+    .project-buttons {
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+  
+    .project-btn {
+      justify-content: center;
+      font-size: 0.9rem;
+      padding: 0.45rem 0.9rem;
+    }
+  }
+  
+  .more-projects-btn-container {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .more-projects-btn {
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .more-projects-btn:hover {
+    background: linear-gradient(to right, #764ba2, #667eea);
+  }
+   */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+   .project-image {
+    transition: transform 0.3s ease;
+  }
+  .project-image:hover {
+    transform: scale(1.03);
+  }
+  
+  .project-details {
+    margin-top: 1rem;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+   */
+
+
+
+
+
+
+
+
+
+   .project-btn {
+    background-color: #00b4db;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border: none; /* Remove default button border */
+  }
+  
+  .project-btn:hover {
+    background-color: #0083b0;
+  }
+  
+  .project-btn:focus {
+    outline: none; /* Remove focus outline */
+  }
+  
+
+
+/* Highlight active card */
+.contribution-card.active {
+  border: 2px solid #00b4db;
+  box-shadow: 0 12px 25px rgba(0, 180, 219, 0.3);
+  transform: translateY(-6px);
+  transition: all 0.3s ease-in-out;
+}
+
+.recent-contributions-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom right, #f8fbfd, #e0f7ff);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rec-underline {
+  width: 100px;
+  height: 4px;
+  background: #00b4db;
+  margin: 0.5rem auto 2rem;
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #003b5b;
+}
+
+.contributions-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.contribution-card {
+  background: #ffffff;
+  padding: 1.8rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.contribution-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.04);
+}
+
+.project-title {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #003b5b;
+}
+
+.project-details {
+  margin-top: 1.2rem;
+  animation: fadeIn 0.4s ease-in-out;
+  display: none;
+}
+
+.contribution-card.active .project-details {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-description {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 0.8rem 0;
+  line-height: 1.6;
+}
+
+.tech-stack {
+  margin-top: 1rem;
+}
+
+.stack-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #007b9e;
+  margin-bottom: 0.5rem;
+}
+
+.tech-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background-color: #00b4db;
+  color: white;
+  padding: 0.4rem 0.9rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  transition: background-color 0.3s ease;
+}
+
+.tech-tag:hover {
+  background-color: #0083b0;
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.project-btn {
+  background-color: rgb(22, 158, 211);
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.project-btn:hover {
+  background-color: #0083b0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .contributions-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .contributions-container {
+    grid-template-columns: 1fr;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .project-title {
+    font-size: 1.3rem;
+  }
+}

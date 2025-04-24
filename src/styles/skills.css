@@ -1,0 +1,467 @@
+/* 
+.skills-section {
+    padding: 2rem;
+    background-color: #f0f9ff;
+    text-align: center;
+  }
+  
+  .underline {
+    width: 100px;
+    height: 4px;
+    background: #00b4db;
+    margin: 0.5rem auto 2rem;
+    border-radius: 2px;
+  }
+  
+  .skills-toggle {
+    margin-bottom: 2rem;
+  }
+  
+  .skills-toggle button {
+    margin: 0 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #ddd;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .skills-toggle button.active,
+  .skills-toggle button:hover {
+    background-color: #0083b0;
+    color: #fff;
+  }
+  
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+  }
+  
+  .skill-bar {
+    width: 80%;
+    text-align: left;
+  }
+  
+  .skill-label {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    color: #0083b0;
+  }
+  
+  .progress-bar {
+    background-color: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 22px;
+  }
+  
+  .progress-fill {
+    background: linear-gradient(to right, #00b4db, #0083b0);
+    height: 100%;
+    width: 0;
+    transition: width 1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 0.5rem;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .progress-text {
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    .skill-bar {
+      width: 95%;
+    }
+  }
+  
+
+
+
+
+
+ */
+
+
+
+
+
+
+
+/* 
+
+ .skills-section {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-top: 2rem;
+  }
+  
+  .skills-section h2 {
+    text-align: center;
+    color: #0083b0;
+  }
+  
+  .underline {
+    width: 100px;
+    height: 4px;
+    background: #00b4db;
+    margin: 0.5rem auto 2rem;
+    border-radius: 2px;
+  }
+  
+  .skills-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .skills-toggle button {
+    background-color: #e0f7fa;
+    color: #0083b0;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .skills-toggle button.active,
+  .skills-toggle button:hover {
+    background-color: #00b4db;
+    color: white;
+  }
+  
+  .skills-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+  
+  .skill-name-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #00b4db;
+    color: #0083b0;
+    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+    cursor: default;
+  }
+  
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .skill-bar {
+    width: 100%;
+  }
+  
+  .skill-label {
+    font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 0.25rem;
+  }
+  
+  .progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    height: 10px;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    background: linear-gradient(to right, #00b4db, #0083b0);
+    height: 100%;
+    transition: width 0.6s ease-in-out;
+    position: relative;
+  }
+  
+  .progress-text {
+    position: absolute;
+    right: 5px;
+    top: -20px;
+    font-size: 0.8rem;
+    color: #0083b0;
+  }
+  
+  @media (max-width: 768px) {
+    .skills-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .skills-container {
+      padding: 0 1rem;
+    }
+  }
+   */
+
+
+
+
+
+/* 
+
+   .skills-section {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-top: 2rem;
+  }
+  
+  .skills-section h2 {
+    text-align: center;
+    color: #0083b0;
+  }
+  
+  .underline {
+    width: 100px;
+    height: 4px;
+    background: #00b4db;
+    margin: 0.5rem auto 2rem;
+    border-radius: 2px;
+  }
+  
+  .skills-grid-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .skills-box {
+    flex: 1;
+    min-width: 280px;
+    border: 2px solid #00b4db;
+    padding: 1rem;
+    border-radius: 12px;
+  }
+  
+  .skills-box h3 {
+    text-align: center;
+    color: #0083b0;
+    margin-bottom: 1rem;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .skill-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    background-color: #f0f8ff;
+    border: 1px solid #00b4db;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .skill-button i {
+    color: #00b4db;
+  }
+  
+  .skill-button:hover {
+    background-color: #00b4db;
+    color: white;
+    border-color: #0083b0;
+  }
+  
+  .skill-button:hover i {
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .skills-grid-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .skills-grid {
+      grid-template-columns: 1fr 1fr; 
+    }
+  }
+   */
+
+
+
+
+
+
+
+
+
+
+
+   .skills-section {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-top: 2rem;
+  }
+  
+  .skills-section h2 {
+    text-align: center;
+    color: #0083b0;
+  }
+  
+  .skills-underline {
+    width: 100px;
+    height: 4px;
+    background: #00b4db;
+    margin: 0.5rem auto 2rem;
+    border-radius: 2px;
+  }
+  
+  .skills-grid-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .skills-box {
+    flex: 1;
+    min-width: 280px;
+    border: 2px solid #00b4db;
+    padding: 1rem;
+    border-radius: 12px;
+  }
+  
+  .skills-box h3 {
+    text-align: center;
+    color: #0083b0;
+    margin-bottom: 1rem;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 skills per row */
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .skill-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    background-color: #f0f8ff;
+    border: 1px solid #00b4db;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .skill-button i {
+    color: #00b4db;
+  }
+  
+  .skill-button:hover {
+    background-color: #00b4db;
+    color: white;
+    border-color: #0083b0;
+  }
+  
+  .skill-button:hover i {
+    color: white;
+  }
+  
+  .show-more-button {
+    margin-top: 1rem;
+    background-color: #00b4db;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    /* width: 100%; */
+    font-size: 1rem;
+  }
+  
+  .show-more-button:hover {
+    background-color: #0083b0;
+  }
+  
+  .skills-range {
+    margin-top: 1rem;
+  }
+  
+  .skill-range {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+  }
+  
+  .skill-name {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .progress-bar {
+    width: 80%;
+    height: 22px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background-color: #00b4db;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .progress-text {
+    margin-right: 10px;
+    color: white;
+    font-size: 0.85rem;
+  }
+  
+  @media (max-width: 768px) {
+    .skills-grid-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .skills-grid {
+      grid-template-columns: 1fr 1fr; /* 2 skills per row on smaller screens */
+    }
+  
+    .show-more-button {
+      width: auto;
+    }
+  }
+  

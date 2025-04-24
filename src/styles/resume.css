@@ -1,0 +1,40 @@
+
+.resume-section {
+    padding: 2rem;
+    background-color: #eef4f7;
+    text-align: center;
+  }
+  
+  .res-underline {
+    width: 100px;
+    height: 4px;
+    background: #00b4db;
+    margin: 0.5rem auto 2rem;
+    border-radius: 2px;
+  }
+  
+
+
+  .resume-buttons {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .download-btn {
+    background: #00b4db;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .download-btn:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+    transform: scale(1.05);
+  }
+  

@@ -1,0 +1,134 @@
+.my-achievements {
+    padding: 2rem;
+    background: #fefefe;
+  }
+  
+  .my-achievements h2 {
+    text-align: center;
+    color: #0077b6;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .underline {
+    width: 120px;
+    height: 4px;
+    background: #00b4d8;
+    margin: 0 auto 2rem;
+    border-radius: 2px;
+  }
+  
+  .achievements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .achievement-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .ach-description {
+    flex: 1 1 50%;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .ach-description h3 {
+    font-size: 1.5rem;
+    color: #023e8a;
+    margin-bottom: 0.5rem;
+  }
+  
+  .ach-description p {
+    font-size: 1rem;
+    color: #333;
+    margin: 0.3rem 0;
+  }
+  
+  .stars {
+    margin-top: 0.5rem;
+  }
+  
+  .stars i {
+    color: #ffc107;
+    margin-right: 4px;
+  }
+  
+  .ach-image {
+    flex: 1 1 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .ach-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    transition: transform 0.3s ease;
+  }
+  
+  .ach-image img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Fullscreen Modal */
+  .fullscreen-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .fullscreen-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    border: 2px solid white;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .achievement-item {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .ach-description {
+      padding-right: 0;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+  
+    .ach-image {
+      width: 100%;
+    }
+  }
+  
+  /* Alternating Layout */
+  .achievement-item:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+  
+  .achievement-item:nth-child(even) {
+    flex-direction: row;
+  }
+  
