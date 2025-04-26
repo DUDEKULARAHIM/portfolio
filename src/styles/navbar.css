@@ -143,6 +143,16 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 /* Navbar Base */
 .navbar {
   display: flex;
@@ -166,18 +176,50 @@
 .navbar-right {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.3rem;
 }
+
+/* .navbar-right a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+} */
 
 .navbar-right a {
   color: white;
   text-decoration: none;
   padding: 0.5rem;
+  position: relative; /* For positioning the pseudo-element */
 }
 
-.navbar-right a:hover {
-  text-decoration: underline;
+/* Dynamic underline animation */
+.navbar-right a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #00b4db;
+  transition: width 0.4s ease;
 }
+
+/* Hover effect */
+.navbar-right a:hover::after {
+  width: 100%; /* Underline grows from 0 to full width of the text */
+}
+
+/* Hover effect for the text */
+.navbar-right a:hover {
+  color: #00b4db;
+  transform: translateY(-2px) scale(1.05);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+/* .navbar-right a:hover {
+  text-decoration: underline;
+} */
 
 /* Dropdown */
 .dropdown {

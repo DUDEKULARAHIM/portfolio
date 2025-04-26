@@ -109,8 +109,64 @@
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
+ 
 }
 
 .more-btn:hover {
   background-color: #0083b0;
+}
+
+
+
+
+
+
+
+
+.abouts-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: center; /* center the buttons */
+}
+
+.abouts-buttons button {
+  display: flex;
+  flex-direction: column; /* arrange number on top, text below */
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: linear-gradient(135deg, #00b4db, #0083b0);
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  min-width: 130px;
+  min-height: 100px;
+}
+
+.abouts-buttons button span {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffeb3b;
+  line-height: 1;
+}
+
+.abouts-buttons button p {
+  margin: 0;
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.abouts-buttons button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #0083b0, #00b4db);
 }

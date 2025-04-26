@@ -349,7 +349,7 @@
   
   .skills-box {
     flex: 1;
-    min-width: 280px;
+    /* min-width: 280px; */
     border: 2px solid #00b4db;
     padding: 1rem;
     border-radius: 12px;
@@ -409,9 +409,9 @@
     font-size: 1rem;
   }
   
-  .show-more-button:hover {
+  /* .show-more-button:hover {
     background-color: #0083b0;
-  }
+  } */
   
   .skills-range {
     margin-top: 1rem;

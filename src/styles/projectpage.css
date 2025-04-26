@@ -518,6 +518,8 @@
     align-items: flex-start;
     gap: 2rem;
     padding-bottom: 2rem;
+    background-color: #f1f1f1;
+    padding:4px;
   }
   
   .project-image {
@@ -530,7 +532,7 @@
   
   .project-content {
     max-width: 600px;
-    /* text-align: center; */
+    text-align: left;
     /* border: 2px solid black; */
     padding: 30px;
     background-color: #f9f9f9;
@@ -650,4 +652,34 @@
 
 .tag:hover i {
   color: white;
+}
+
+
+
+.mores-btn {
+  background-color: #0077b6;
+  color: white;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;  /* Center text in button */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 10px; /* Adds space between description and button */
+  margin-bottom: 10px;
+  align-self: flex-start; /* Align the button to the left */
+}
+
+.mores-btn:hover {
+  background-color: #005f8b;
+  transform: scale(1.05);
+}
+
+.mores-btn:focus {
+  outline: none;
+}
+
+.project-content p {
+  margin-bottom: 10px;
 }

@@ -67,14 +67,14 @@ const Resume = () => {
       <div className="resume-buttons">
         <a
           href="/CV/general.pdf"
-          download="Dudekula_Rahim_General_CV.pdf"
+          // download="Dudekula_Rahim_General_CV.pdf"
           className="download-btn"
         >
           Download General CV
         </a>
         <a
           href="/cv/specialized.pdf"
-          download="Dudekula_Rahim_Specialised_CV.pdf"
+          // download="Dudekula_Rahim_Specialised_CV.pdf"
           className="download-btn"
         >
           Download Specialised CV

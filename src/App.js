@@ -13,7 +13,7 @@ import ProjectDetails from "./pages/Projects";
 // import NonTechSkills from "./pages/NonTechSkills";
 import Certificates from "./pages/routepages/MyCertificates";
  import Achievements from "./pages/routepages/MyAchievements";
-// import Blogs from "./pages/Blogs";
+import Myskills from "./pages/routepages/Allskills";
 import Contributions from "./pages/routepages/ContactUs";
 import RecentContributions from "./pages/RecentContributions";
 import Footer from "./components/Footer";
@@ -48,6 +48,8 @@ function App() {
         <Route path="/certificates" element={<Certificates />} />
         <Route path="/achievements" element={<Achievements />} />
         <Route path="/contributions" element={<Contributions />} />
+        // <Route path="/skills" element={<Myskills />} />
+
         </>
         // <Route path="/tech-skills" element={<TechSkills />} />
         // <Route path="/non-tech-skills" element={<NonTechSkills />} />

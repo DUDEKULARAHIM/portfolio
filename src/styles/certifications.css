@@ -95,10 +95,6 @@
 
 
 
-
-
-
-
    .certifications-section {
     padding: 2rem;
     background-color: #fff;
@@ -110,6 +106,7 @@
   .certifications-section h2 {
     text-align: center;
     color: #0083b0;
+    font-size: 2rem;
   }
   
   .cert-underline {
@@ -122,7 +119,7 @@
   
   .certifications-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
   }
@@ -132,7 +129,8 @@
     border: 1px solid #ddd;
     border-radius: 12px;
     padding: 1.5rem;
-    width: 280px;
+    width: 300px;
+    max-width: 100%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
   }
@@ -156,11 +154,11 @@
   .certification-details h3 {
     color: #0083b0;
     margin-bottom: 0.5rem;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
   
   .certification-details p {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: #555;
     margin-bottom: 1rem;
   }
@@ -171,7 +169,7 @@
     color: white;
     padding: 0.4rem 1rem;
     border-radius: 20px;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
   
   .redirect-button-container {
@@ -183,7 +181,7 @@
     background: linear-gradient(to right, #4facfe, #00f2fe);
     color: white;
     border: none;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 2rem;
     font-size: 1rem;
     border-radius: 8px;
     cursor: pointer;
@@ -194,10 +192,68 @@
     background: linear-gradient(to right, #00f2fe, #4facfe);
   }
   
+  /* RESPONSIVE STYLES */
   @media (max-width: 768px) {
     .certifications-container {
       flex-direction: column;
       align-items: center;
+      gap: 1.5rem;
+    }
+  
+    .certification-card {
+      width: 90%;
+      padding: 1.2rem;
+    }
+  
+    .certifications-section h2 {
+      font-size: 1.8rem;
+    }
+  
+    .certification-details h3 {
+      font-size: 1.2rem;
+    }
+  
+    .certification-details p {
+      font-size: 0.95rem;
+    }
+  
+    .redirect-button {
+      padding: 0.7rem 1.5rem;
+      width: 80%;
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .certifications-section {
+      padding: 1.5rem 1rem;
+    }
+  
+    .certification-card {
+      /* width: 100%; */
+      padding: 1rem;
+    }
+  
+    .certification-logo {
+      font-size: 2rem;
+    }
+  
+    .certification-details h3 {
+      font-size: 1.1rem;
+    }
+  
+    .certification-details p {
+      font-size: 0.9rem;
+    }
+  
+    .certification-date {
+      font-size: 0.8rem;
+    }
+  
+    .redirect-button {
+      width: 100%;
+      font-size: 1rem;
+      padding: 0.7rem 1rem;
     }
   }
   

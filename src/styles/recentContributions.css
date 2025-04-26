@@ -641,9 +641,9 @@
 
 
 
+/* 
 
 
-/* ====== Base Styles ====== */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to bottom right, #f8fbfd, #e0f7ff);
@@ -670,7 +670,6 @@ h2 {
   color: #003b5b;
 }
 
-/* ====== Layout ====== */
 .contributions-container {
   display: flex;
   flex-wrap: wrap;
@@ -701,24 +700,23 @@ h2 {
   box-shadow: 0 12px 25px rgba(0, 180, 219, 0.3);
 }
 
-/* ====== Project Image ====== */
+
 .project-image {
   width: 100%;
   height: auto;
   border-radius: 12px;
   object-fit: cover;
   transition: transform 0.4s ease, filter 0.4s ease, opacity 0.4s ease;
-  opacity: 1; /* Removed blur opacity */
-  filter: none; /* Removed blur and grayscale filter */
+  opacity: 1;
+  filter: none; 
 }
 
 .project-image:hover {
   transform: scale(1.05);
   opacity: 1;
-  filter: none; /* No filter on hover */
+  filter: none; 
 }
 
-/* ====== Titles and Descriptions ====== */
 .project-title {
   margin-top: 1rem;
   font-size: 1.5rem;
@@ -726,8 +724,7 @@ h2 {
   color: #003b5b;
 }
 
-/* Expandable content */
-/* ====== Project Details ====== */
+
 .project-details {
   max-height: 0;
   opacity: 0;
@@ -739,7 +736,7 @@ h2 {
 }
 
 .contribution-card.active .project-details {
-  max-height: 1000px; /* Set to a large value to accommodate content */
+  max-height: 1000px; 
   opacity: 1;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -754,19 +751,18 @@ h2 {
   animation: fadeIn 0.5s ease-in-out;
 }
 
-/* ====== Fade effect ====== */
+
 @keyframes fadeIn {
   from {
-    /* opacity: 0; */
+   
     transform: translateY(10px);
   }
   to {
-    /* opacity: 1; */
+    
     transform: translateY(0);
   }
 }
 
-/* ====== Tech Stack Tags ====== */
 .stack-heading {
   font-size: 1rem;
   font-weight: 600;
@@ -801,7 +797,6 @@ h2 {
   background-color: #0083b0;
 }
 
-/* ====== Buttons ====== */
 .project-buttons {
   display: flex;
   justify-content: center;
@@ -829,7 +824,7 @@ h2 {
   border: 2px solid #169ed3;
 }
 
-/* ====== Responsive Design ====== */
+
 @media (max-width: 1024px) {
   .contributions-container {
     flex-direction: row;
@@ -868,4 +863,213 @@ h2 {
 
 .more-projects-btn:hover {
   background: linear-gradient(to right, #0083b0, #00b4db);
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.recent-contributions {
+  padding: 50px 20px;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.recent-contributions h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.recent-contributions h2 span {
+  color: #4f46e5;
+}
+
+.underline {
+  width: 80px;
+  height: 4px;
+  background-color: #4f46e5;
+  margin: 10px auto 30px;
+  border-radius: 2px;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px; /* increased slightly for better spacing */
+  /* padding: 0 20px; */
+}
+
+.projects-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  width: 400px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-card:hover {
+  transform: translateY(-8px);
+}
+
+.projects-image {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.projects-content {
+  padding: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.projects-content h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.short-description {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tech-item {
+  background: #eef2ff;
+  color: #4f46e5;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.shows-more-button {
+  background: none;
+  border: none;
+  color: #4f46e5;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+
+.shows-more-button:hover {
+  color: #535166;
+}
+
+.github-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #4f46e5;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.github-button i {
+  font-size: 1.2rem;
+}
+
+.github-button:hover {
+  background: #413f4d;
+}
+
+.more-description {
+  padding: 2px;
+  border-radius: 12px;
+  margin-top: 15px;
+  color: #333;
+  font-size: 0.95rem;
+  background: none;
+}
+
+.view-all {
+  margin-top: 40px;
+}
+
+.view-all a {
+  text-decoration: none;
+  color: #4f46e5;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border: 2px solid #4f46e5;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.view-all a:hover {
+  background: #4f46e5;
+  color: white;
+}
+
+/* Small screen support */
+@media (max-width: 768px) {
+  .projects-card { /* corrected typo: it was project-card (wrong) */
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-card {
+    width: 100%;
+  }
+
+  .projects-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .short-description {
+    font-size: 0.9rem;
+  }
+
+  .tech-item {
+    font-size: 0.8rem;
+  }
 }

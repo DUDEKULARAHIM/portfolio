@@ -190,3 +190,66 @@
   }
   
 
+
+  
+/* ---------------------------- */
+/* RESPONSIVE FOR SMALL SCREENS */
+/* ---------------------------- */
+@media (max-width: 768px) {
+  .achievements-section {
+    padding: 2rem 1rem;
+  }
+
+  .achievements-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .achievement-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .achievement-card {
+    padding: 1rem;
+  }
+
+  .achievement-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .achievement-card p {
+    font-size: 0.95rem;
+  }
+
+  .date-button {
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  .more-button {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .achievement-icon {
+    font-size: 1.8rem;
+  }
+
+  .achievement-card h3 {
+    font-size: 1rem;
+  }
+
+  .achievement-card p {
+    font-size: 0.9rem;
+  }
+
+  .date-button, .more-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}

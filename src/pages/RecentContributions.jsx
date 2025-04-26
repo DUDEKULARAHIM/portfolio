@@ -513,126 +513,224 @@
 
 
 
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import '../styles/recentContributions.css';
-import img1 from '../assets/project1.png';
-import img2 from '../assets/project2.png';
-import img3 from '../assets/project3.png';
+// import React, { useState } from 'react';
+// import { useNavigate } from 'react-router-dom';
+// import '../styles/recentContributions.css';
+// import img1 from '../assets/project1.png';
+// import img2 from '../assets/project2.png';
+// import img3 from '../assets/project3.png';
 
-const contributions = [
+// const contributions = [
+//   {
+//     name: "Restaurant Reservation Website",
+//     description: "Using MERN Stack Technologies I built a beautiful, responsive restaurant booking application, also mobile-friendly.",
+//     techStack: ["html", "css", "javascript", "react", "mongodb", "express", "node", "bootstrap"],
+//     image: img1,
+//     github: "https://github.com/DUDEKULARAHIM/Sample-Restaurant-Website",
+//     live: "https://sample-restaurant-website.onrender.com",
+//   },
+//   {
+//     name: "Event Management Calendar",
+//     description: "An event calendar with scheduling, adding/editing/deleting events, and custom date options.",
+//     techStack: ["node", "mongodb", "localstorage", "react", "css", "javascript"],
+//     image: img2,
+//     github: "https://github.com/DUDEKULARAHIM/event-manager-calendar",
+//     live: "https://event-manager-calendar.onrender.com",
+//   },
+//   {
+//     name: "Chat Application",
+//     description: "Real-time chat app using Socket.IO and MongoDB.",
+//     techStack: ["react", "css", "localstorage", "socket.io", "express", "node", "bootstrap"],
+//     image: img3,
+//     github: "https://github.com/mohan2347/chat-application",
+//     live: "https://chat-application-x.onrender.com",
+//   },
+// ];
+
+// const getTechIcon = (tech) => {
+//   const iconMap = {
+//     html: "fab fa-html5",
+//     css: "fab fa-css3-alt",
+//     javascript: "fab fa-js",
+//     react: "fab fa-react",
+//     node: "fab fa-node-js",
+//     "node.js": "fab fa-node-js",
+//     mongodb: "fas fa-database",
+//     express: "fas fa-server",
+//     bootstrap: "fab fa-bootstrap",
+//     "socket.io": "fas fa-plug",
+//     localstorage: "fas fa-hdd",
+//   };
+//   const key = tech.toLowerCase();
+//   return iconMap[key] || "fas fa-code";
+// };
+
+// const RecentContributions = () => {
+//   const [expandedIds, setExpandedIds] = useState([]);
+//   const navigate = useNavigate();
+
+//   const toggleDetails = (id) => {
+//     setExpandedIds((prev) => {
+//       if (prev.includes(id)) return prev.filter((item) => item !== id);
+//       else if (prev.length < 3) return [...prev, id];
+//       else return [...prev.slice(1), id];
+//     });
+//   };
+
+//   return (
+//     <section className="recent-contributions-section">
+//       <h2>Projects</h2>
+//       <div className="rec-underline"></div>
+
+//       <div className="contributions-container">
+//         {contributions.map((project, index) => {
+//           const isExpanded = expandedIds.includes(index);
+//           return (
+//             <div
+//               key={index}
+//               className={`contribution-card ${isExpanded ? 'active' : ''}`}
+//               onClick={() => toggleDetails(index)}
+//             >
+//               <img
+//                 src={project.image}
+//                 alt={project.name}
+//                 className="project-image"
+//                 loading="lazy"
+//               />
+//               <h3 className="project-title">{project.name}</h3>
+
+//               {isExpanded && (
+//                 <div className="project-details">
+//                   <p className="project-description">{project.description}</p>
+
+//                   <div className="tech-stack">
+//                     <div className="stack-heading">Languages & Tech:</div>
+//                     <div className="tech-tags">
+//                       {project.techStack.map((tech, idx) => (
+//                         <span key={idx} className="tech-tag">
+//                           <i className={getTechIcon(tech)}></i> {tech}
+//                         </span>
+//                       ))}
+//                     </div>
+//                   </div>
+
+//                   <div className="project-buttons">
+//                     <a href={project.github} className="project-btn" target="_blank" rel="noopener noreferrer">
+//                       GitHub
+//                     </a>
+//                     <a href={project.live} className="project-btn" target="_blank" rel="noopener noreferrer">
+//                       Live Link
+//                     </a>
+//                   </div>
+//                 </div>
+//               )}
+//             </div>
+//           );
+//         })}
+//       </div>
+
+//       <button className="more-projects-btn" onClick={() => navigate('/projects')}>
+//         View More Projects
+//       </button>
+//     </section>
+//   );
+// };
+
+// export default RecentContributions;
+
+
+
+
+
+
+
+
+
+
+
+
+import React, { useState } from 'react';
+import '../styles/recentContributions.css';
+import Img1 from '../assets/project1.png'; // Update if needed
+import Img2 from '../assets/project2.png';
+import Img3 from '../assets/project3.png';
+
+const projects = [
   {
-    name: "Restaurant Reservation Website",
-    description: "Using MERN Stack Technologies I built a beautiful, responsive restaurant booking application, also mobile-friendly.",
-    techStack: ["html", "css", "javascript", "react", "mongodb", "express", "node", "bootstrap"],
-    image: img1,
-    github: "https://github.com/DUDEKULARAHIM/Sample-Restaurant-Website",
-    live: "https://sample-restaurant-website.onrender.com",
+    id: 1,
+    title: 'Restaurant Website',
+    image: Img1,
+    shortDescription: 'Developed a modern restaurant website focused on smooth user experience for online orders.',
+    moreDescription: 'Key Features: Responsive design, interactive menu with filtering, online reservation system, payment integration.',
+    techStack: ['HTML', 'CSS', 'JavaScript'],
+    githubLink: 'https://github.com/your-restaurant-project',
   },
   {
-    name: "Event Management Calendar",
-    description: "An event calendar with scheduling, adding/editing/deleting events, and custom date options.",
-    techStack: ["node", "mongodb", "localstorage", "react", "css", "javascript"],
-    image: img2,
-    github: "https://github.com/DUDEKULARAHIM/event-manager-calendar",
-    live: "https://event-manager-calendar.onrender.com",
+    id: 1,
+    title: 'E-commerce Platform',
+    image: Img2,
+    shortDescription: 'Built a full-featured e-commerce platform with catalog, shopping cart, and user authentication.',
+    moreDescription: 'Key Features: Product search, payment gateway, user profile management, order tracking.',
+    techStack: ['React', 'Node.js', 'MongoDB'],
+    githubLink: 'https://github.com/your-ecommerce-project',
   },
   {
-    name: "Chat Application",
-    description: "Real-time chat app using Socket.IO and MongoDB.",
-    techStack: ["react", "css", "localstorage", "socket.io", "express", "node", "bootstrap"],
-    image: img3,
-    github: "https://github.com/mohan2347/chat-application",
-    live: "https://chat-application-x.onrender.com",
+    id: 1,
+    title: 'Student Management System',
+    image: Img3,
+    shortDescription: 'Developed a system for tracking academic progress, attendance, and reports.',
+    moreDescription: 'Key Features: Student profile, attendance dashboard, grade tracking, notification system.',
+    techStack: ['Java', 'MySQL', 'JavaFX'],
+    githubLink: 'https://github.com/your-student-system',
   },
 ];
 
-const getTechIcon = (tech) => {
-  const iconMap = {
-    html: "fab fa-html5",
-    css: "fab fa-css3-alt",
-    javascript: "fab fa-js",
-    react: "fab fa-react",
-    node: "fab fa-node-js",
-    "node.js": "fab fa-node-js",
-    mongodb: "fas fa-database",
-    express: "fas fa-server",
-    bootstrap: "fab fa-bootstrap",
-    "socket.io": "fas fa-plug",
-    localstorage: "fas fa-hdd",
-  };
-  const key = tech.toLowerCase();
-  return iconMap[key] || "fas fa-code";
-};
-
 const RecentContributions = () => {
-  const [expandedIds, setExpandedIds] = useState([]);
-  const navigate = useNavigate();
+  const [expandedCardId, setExpandedCardId] = useState(null);
 
-  const toggleDetails = (id) => {
-    setExpandedIds((prev) => {
-      if (prev.includes(id)) return prev.filter((item) => item !== id);
-      else if (prev.length < 3) return [...prev, id];
-      else return [...prev.slice(1), id];
-    });
+  const toggleExpand = (id) => {
+    setExpandedCardId(expandedCardId === id ? null : id);
   };
 
   return (
-    <section className="recent-contributions-section">
-      <h2>Projects</h2>
-      <div className="rec-underline"></div>
+    <div className="recent-contributions">
+      <h2>Recent <span>Contributions</span></h2>
+      <div className="underline"></div>
 
-      <div className="contributions-container">
-        {contributions.map((project, index) => {
-          const isExpanded = expandedIds.includes(index);
-          return (
-            <div
-              key={index}
-              className={`contribution-card ${isExpanded ? 'active' : ''}`}
-              onClick={() => toggleDetails(index)}
-            >
-              <img
-                src={project.image}
-                alt={project.name}
-                className="project-image"
-                loading="lazy"
-              />
-              <h3 className="project-title">{project.name}</h3>
-
-              {isExpanded && (
-                <div className="project-details">
-                  <p className="project-description">{project.description}</p>
-
-                  <div className="tech-stack">
-                    <div className="stack-heading">Languages & Tech:</div>
-                    <div className="tech-tags">
-                      {project.techStack.map((tech, idx) => (
-                        <span key={idx} className="tech-tag">
-                          <i className={getTechIcon(tech)}></i> {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="project-buttons">
-                    <a href={project.github} className="project-btn" target="_blank" rel="noopener noreferrer">
-                      GitHub
-                    </a>
-                    <a href={project.live} className="project-btn" target="_blank" rel="noopener noreferrer">
-                      Live Link
-                    </a>
-                  </div>
+      <div className="projects-grid">
+        {projects.map((project) => (
+          <div key={project.id} className="projects-card">
+            <img src={project.image} alt={project.title} className="projects-image" />
+            <div className="projects-content">
+              <h3>{project.title}</h3>
+              <p className="short-description">{project.shortDescription}</p>
+              <div className="tech-stack">
+                {project.techStack.map((tech, index) => (
+                  <span key={index} className="tech-item">{tech}</span>
+                ))}
+              </div>
+              <div className="card-footer">
+                <button onClick={() => toggleExpand(project.id)} className="shows-more-button">
+                  {expandedCardId === project.id ? 'Show Less' : 'Show More'}
+                </button>
+                <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="github-button">
+                  <i className="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+              {expandedCardId === project.id && (
+                <div className="more-description">
+                  <p>{project.moreDescription}</p>
                 </div>
               )}
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
 
-      <button className="more-projects-btn" onClick={() => navigate('/projects')}>
-        View More Projects
-      </button>
-    </section>
+      <div className="view-all">
+        <a href="/projects1">View All Projects</a>
+      </div>
+    </div>
   );
 };
 
