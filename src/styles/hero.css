@@ -51,6 +51,10 @@
   .hero p {
     font-size: 1rem;
   }
+  .hero-buttons{
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 
