@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <h3>Contact Me := </h3>
+        //<h3>Contact Me := </h3>
         {socialLinks.map((social, index) => (
           <div key={index} className="social-item">
             <a href={social.url} target="_blank" rel="noopener noreferrer" className="social-link">
