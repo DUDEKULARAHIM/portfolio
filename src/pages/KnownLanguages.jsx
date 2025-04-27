@@ -47,8 +47,9 @@ import '../styles/knownLanguages.css';
 const KnownLanguages = () => {
   const languages = [
     { name: 'Telugu', icon: 'fas fa-language' },
-    { name: 'Hindi', icon: 'fas fa-language' },
     { name: 'English', icon: 'fas fa-language' },
+    { name: 'Hindi', icon: 'fas fa-language' },
+    
     // { name: 'Tamil', icon: 'fas fa-language' },
     // { name: 'Kannada', icon: 'fas fa-language' },
   ];

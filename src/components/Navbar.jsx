@@ -349,7 +349,7 @@ const Navbar = () => {
             <NavLink to="/certificates" onClick={closeMenu}>Certificates</NavLink>
             <NavLink to="/achievements" onClick={closeMenu}>Achievements</NavLink>
             <NavLink to="/skills" onClick={closeMenu}>My Skills</NavLink>
-            <NavLink to="/contributions" onClick={closeMenu}>COntact Us</NavLink>
+            <NavLink to="/contributions" onClick={closeMenu}>Contact Us</NavLink>
           </div>
         </div>
       </div>

@@ -73,7 +73,7 @@ const Resume = () => {
           Download General CV
         </a>
         <a
-          href="/cv/specialized.pdf"
+          href="/CV/specialized.pdf"
           // download="Dudekula_Rahim_Specialised_CV.pdf"
           className="download-btn"
         >

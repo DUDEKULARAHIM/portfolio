@@ -557,8 +557,7 @@
 
 
 
-
-
+/* Main Contact Section */
 .contact-section {
   width: 100%;
   min-height: 100vh;
@@ -569,17 +568,18 @@
   text-align: center;
 }
 
+/* Heading */
 .contact-heading {
   font-size: 2.5rem;
   margin-bottom: 2rem;
 }
 
-/* Bottom container: side-by-side content */
+/* Bottom Content Wrapper */
 .contact-bottom {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap; /* makes it responsive */
+  flex-wrap: wrap;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -587,34 +587,46 @@
 /* Left Side */
 .contact-left {
   flex: 1;
-  min-width: 300px;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 2rem;
-  box-sizing: border-box;
-  border-radius: 8px;
-  /* text-align: left; */
-  /* justify-content: center;
+  min-width: 280px;
+  display: flex;
   align-items: center;
-  text-align: center; */
+  justify-content: center;
 }
 
 .left-content {
-  max-width: 500px;
-  margin: 0 auto;
-  /* justify-content: center;
-  align-items: center;
-  text-align: center; */
-}
-
-.left-content .info-text {
-  margin-bottom: 1.2rem;
-  line-height: 1.5;
-  justify-content: center;
-  align-items: center;
   text-align: center;
 }
 
-/* Right Side (Form) */
+.info-text {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Social Icons under Info */
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icon {
+  font-size: 30px;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #0056b3;
+  transform: scale(1.2);
+}
+
+.social-icon i {
+  margin: 0 10px;
+}
+
+/* Right Side Form */
 .contact-right {
   flex: 1;
   min-width: 300px;
@@ -637,6 +649,7 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
+  width: 100%;
 }
 
 .contact-right textarea {
@@ -659,7 +672,7 @@
   background-color: #1a5ed9;
 }
 
-/* Social Footer */
+/* Footer Social Section */
 .social-footer {
   width: 100%;
   display: flex;
@@ -668,35 +681,57 @@
   padding: 2rem 0;
   background: #f9f9f9;
   margin-top: 3rem;
+  flex-wrap: wrap;
 }
 
 .icon-wrapper {
   position: relative;
   font-size: 2rem;
   color: #333;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
 }
 
 .icon-wrapper:hover {
   transform: scale(1.2);
+  color: #2575fc;
 }
 
+/* Tooltip */
 .icon-wrapper::before {
   content: attr(data-tooltip);
   position: absolute;
-  top: -40px;
+  top: -35px;
   left: 50%;
   transform: translateX(-50%);
   background: #2575fc;
   color: #fff;
-  font-size: 0.75rem;
-  padding: 0.4rem 0.75rem;
-  border-radius: 50%;
+  font-size: 0.7rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
   opacity: 0;
   transition: 0.3s ease;
   pointer-events: none;
+  white-space: nowrap;
 }
 
 .icon-wrapper:hover::before {
   opacity: 1;
+}
+
+/* Make everything mobile friendly */
+@media (max-width: 768px) {
+  .contact-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100%;
+  }
+
+  .social-footer {
+    flex-direction: column;
+  }
 }

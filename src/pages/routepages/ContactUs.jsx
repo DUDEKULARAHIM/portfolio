@@ -578,19 +578,41 @@ const ContactUs = () => {
       {/* Bottom Content Wrapper */}
       <div className="contact-bottom">
         {/* Left Side - Personal Info */}
-        <div className="contact-left">
-          <div className="left-content">
-            <p className="info-text">
-              Have a question or want to work together? Drop us a message!
-            </p>
-            <p className="info-text">
-              <strong>Email:</strong> rahimdudekula@gmail.com
-            </p>
-            <p className="info-text">
-              <strong>Location:</strong> Markapur, Andhra Pradesh 523316.
-            </p>
-          </div>
-        </div>
+        {/* Bottom Content Wrapper */}
+<div className="contact-bottom">
+  {/* Left Side - Personal Info */}
+  <div className="contact-left">
+    <div className="left-content">
+      <p className="info-text">
+        Have a question or want to work together? Drop me a message!
+      </p>
+      <p className="info-text">
+        <strong>Email:</strong> rahimdudekula@gmail.com
+      </p>
+      <p className="info-text">
+        <strong>Location:</strong> Markapur, Andhra Pradesh 523316.
+      </p>
+
+      {/* Font Awesome Icons */}
+      <div className="social-icons">
+        <a href="mailto:rahimdudekula@gmail.com" className="social-icon" target="_blank" rel="noopener noreferrer">
+          <i className="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/rahimdudekula" className="social-icon" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/rahimdudekula" className="social-icon" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-github"></i>
+        </a>
+        <a href="https://twitter.com/rahimdudekula" className="social-icon" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
         {/* Right Side - Contact Form */}
         <div className="contact-right">
@@ -632,3 +654,26 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

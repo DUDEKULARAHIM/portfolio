@@ -466,7 +466,26 @@
     }
   }
   
-
+  .redirect-button-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .redirect-to-skills-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .redirect-to-skills-btn:hover {
+    background-color: #0056b3;
+  }
+  
 
 
 

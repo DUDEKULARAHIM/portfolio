@@ -223,9 +223,8 @@
 
 
 
-
-
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Importing Link for navigation
 import '../styles/skills.css';
 
 const Skills = () => {
@@ -328,13 +327,18 @@ const Skills = () => {
           )}
         </div>
       </div>
+
+      {/* Redirect Button */}
+      <div className="redirect-button-container">
+        <Link to="/skills">
+          <button className="redirect-to-skills-btn">Go to Skills Page</button>
+        </Link>
+      </div>
     </section>
   );
 };
 
 export default Skills;
-
-
 
 
 
