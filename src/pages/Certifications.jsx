@@ -91,6 +91,7 @@ const Certifications = () => {
       logo: 'fab fa-js-square',
       date: 'December 2024',
     },
+    
    
   ];
 

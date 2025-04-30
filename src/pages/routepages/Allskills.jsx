@@ -305,13 +305,20 @@ const database = [
 ];
 
 const nonTechnicalSkills = [
-  { name: 'Problem Solving', icon: 'fas fa-tools' },
-  { name: 'Time Management', icon: 'fas fa-clock' },
-  { name: 'Teamwork', icon: 'fas fa-users' },
-  { name: 'Adaptability', icon: 'fas fa-random' },
-  { name: 'Creativity', icon: 'fas fa-lightbulb' },
-  { name: 'Communication', icon: 'fas fa-comments' },
-  { name: 'Leadership', icon: 'fas fa-user-tie' },
+  // { name: 'Problem Solving', icon: 'fas fa-tools' },
+  // { name: 'Time Management', icon: 'fas fa-clock' },
+  // { name: 'Teamwork', icon: 'fas fa-users' },
+  // { name: 'Adaptability', icon: 'fas fa-random' },
+  // { name: 'Creativity', icon: 'fas fa-lightbulb' },
+  // { name: 'Communication', icon: 'fas fa-comments' },
+  // { name: 'Leadership', icon: 'fas fa-user-tie' },
+  { name: 'Problem Solving' },
+  { name: 'Time Management' },
+  { name: 'Teamwork' },
+  { name: 'Adaptability'},
+  { name: 'Creativity' },
+  { name: 'Communication' },
+  { name: 'Leadership'},
 ];
 
 const Allskills = () => {
